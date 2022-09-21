@@ -141,7 +141,12 @@ button {
 .main {
   overflow: hidden; /* For the animations ScrollReveal*/
 }
-
+.video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+}
 /*=============== HEADER & NAV ===============*/
 
 
