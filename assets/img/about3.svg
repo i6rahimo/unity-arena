@@ -1,0 +1,16 @@
+<svg width="139" height="139" viewBox="0 0 139 139" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_f_142_925)">
+<circle cx="69.5" cy="69.5" r="39.5" fill="#2F1EDB" fill-opacity="0.55"/>
+</g>
+<path d="M90 33H49V49.7239C49 58.9331 53.6828 67.5103 61.4293 72.4903C66.6296 75.8333 73.321 75.7583 78.445 72.2996L78.6544 72.1583C85.7483 67.3699 90 59.3703 90 50.8116V33Z" stroke="white" stroke-width="2"/>
+<path d="M82.5 88L80.4933 86.8851C76.177 84.4872 73.5 79.9377 73.5 75V75H65.5V75C65.5 79.9767 62.9362 84.6024 58.716 87.24L57.5 88M82.5 88H57.5M82.5 88V96.5M57.5 88V96.5M57.5 96.5H82.5M57.5 96.5V96.5C53.0817 96.5 49.5 100.082 49.5 104.5V106.5H90V104C90 99.8579 86.6421 96.5 82.5 96.5V96.5" stroke="white" stroke-width="2"/>
+<path d="M48.5 38H43.9371C40.5243 38 38.1145 41.3435 39.1937 44.5811L39.5981 45.7944C41.8176 52.4527 45.9349 58.317 51.4435 62.6659L52.5 63.5" stroke="white" stroke-width="2"/>
+<path d="M90.5 38.5H95.0629C98.4757 38.5 100.886 41.8435 99.8063 45.0811L99.4019 46.2944C97.1824 52.9527 93.0651 58.817 87.5565 63.1659L86.5 64" stroke="white" stroke-width="2"/>
+<defs>
+<filter id="filter0_f_142_925" x="0" y="0" width="139" height="139" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="15" result="effect1_foregroundBlur_142_925"/>
+</filter>
+</defs>
+</svg>

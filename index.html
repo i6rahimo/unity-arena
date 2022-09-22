@@ -20,7 +20,7 @@
                     <source media="(max-width:650px)" srcset="/assets/img/logo-mobile.svg">
                     <img src="/assets/img/logo.svg" alt="Логотип">
                 </picture>
-                <nav class="header__nav">
+                <nav class="header__nav show">
                     <ul class="header__ul">
                         <li class="header__li">
                             <a class="header__link" href="#">О нас</a>
@@ -32,32 +32,36 @@
                             <a class="header__link" href="#">Контакты</a>
                         </li>
                     </ul>
-                </nav>
-                <div class="header__btns">
-                    <div class="header__btns-tel">
-                        <a class="btn-link" href="tel:+89888889902">8 (988) 888-99-02</a>
+                    <div class="header__btns">
+                        <div class="header__btns-tel">
+                            <a class="btn-link" href="tel:+89888889902">8 (988) 888-99-02</a>
+                        </div>
+                        <a class="header__btns-order">Забронировать</a>
                     </div>
-                    <a class="header__btns-order">Забронировать</a>
+                </nav>
+                <div class="header__close">
+                    <span class="span-up"></span>
+                    <span class="span-middle"></span>
+                    <span class="span-down"></span>
                 </div>
             </div>
-            
-        </header>
-
-        <!--==================== MAIN ====================-->
-        <main class="main">
-            <!--==================== HOME ====================-->
-            <section class="home" id="home">
-
+            <div class="home">
                 <div class="swiper">
+                    
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                       <!-- Slides -->
-                      <div class="swiper-slide">
-    
-                              <video class="video" autoplay muted>
-                                  <source src="/assets/video/Light Streaks_1440x1000.webm">
-                                </video>
-                        
+                      <div class="swiper-slide"> 
+                            <video class="video video-large" autoplay muted>
+                                    <source src="/assets/video/video-large.webm">
+                            </video>
+                            <video class="video video-middle" autoplay muted>
+                                    <source src="/assets/video/video-middle.webm">
+                            </video>
+                            <video class="video video-small" autoplay muted>
+                                    <source src="/assets/video/video-small.webm">
+                            </video>
+                            
                             <div class="swiper__text container">
                                 <h1 class="swiper-title">Новый подход к <br> киберспортивному <br> пространству</h1>
                                 <p class="swiper-subtitle">Компьютерный клуб на ул. Селезнева, 87</p>
@@ -75,8 +79,13 @@
                         </div>
                         <div class="swiper-slide">
     
+    
                         <div class="swiper-img">
-                            <img src="/assets/img/slide2.png" alt="Фон 2">
+                            <picture>
+                                <source media="(min-width:1441px)" srcset="/assets/img/slide2-large.png">
+                                <source media="(min-width:361px)" srcset="/assets/img/slide2-middle.png">
+                                <img src="/assets/img/slide2-small.png" alt="Слайдер 2" >
+                              </picture> 
                         </div>
                       
                           <div class="swiper__text container">
@@ -94,12 +103,15 @@
                               </div>
                           </div>
                
-                      </div>
-
-                      <div class="swiper-slide">
+                      </div> 
+    
+                      <div class="swiper-slide swiper-slide-three">
     
                         <div class="swiper-img swiper-img-three">
-                            <img src="/assets/img/slide3.png" alt="Фон 3">
+                            <picture id="slide3">
+                                <source media="(max-width:461px)" srcset="/assets/img/slide3-small.svg">
+                                <img  src="/assets/img/slide3.svg" alt="Fortnite">
+                              </picture> 
                         </div>
                       
                           <div class="swiper__text container">
@@ -115,15 +127,47 @@
                                   </div>
                               </div>
                           </div>
-               
-                      </div>
-                 
+                        </div> 
                     </div>
+                    <div class="container-pagination">
+                        <div class=" swiper-pagination"></div> 
+                    </div>
+                    
+                    
                     <!-- If we need pagination -->
-                    <div class="swiper-pagination"></div>
-                  </div>
-             
-            </section>
+                </div>
+            </div>
+            
+        </header>
+        
+        <!--==================== MAIN ====================-->
+        <main class="main container">
+            <!--==================== HOME ====================-->
+            
+            <section class="about  container">
+                <div class="about__text">
+                        <p class="about__text-text">UNITY ARENA - это стильный, ни на что не похожий интерьер, крутая атмосфера, возможность вкусно перекусить во время игры и отличный сервис во всем.
+                            Возможность прийти одному или командой. Буткемпы, стримерские, турниры разного уровня. Но самое главное, это просто лучшее место для игры
+                        </p>
+                    </div>
+                    <div class="about__items">
+                        <div class="about__item">
+                            <img class="about__item-img" src="/assets/img/about1.svg" alt="Вентилятор">
+                            <p class="about__item-text">МОЩНЫЕ И
+                                ГРАМОТНО НАСТРОЕННЫЕ ИГРОВЫЕ ПК</p>
+                        </div>
+                        <div class="about__item">
+                            <img class="about__item-img" src="/assets/img/about2.svg" alt="Вентилятор">
+                            <p class="about__item-text">МОЩНЫЕ И
+                                ГРАМОТНО НАСТРОЕННЫЕ ИГРОВЫЕ ПК</p>
+                        </div>
+                        <div class="about__item">
+                            <img class="about__item-img" src="/assets/img/about3.svg" alt="Вентилятор">
+                            <p class="about__item-text">МОЩНЫЕ И
+                                ГРАМОТНО НАСТРОЕННЫЕ ИГРОВЫЕ ПК</p>
+                        </div>
+                    </div>
+                </section>
 
             <!--==================== LOGOS ====================-->
           
