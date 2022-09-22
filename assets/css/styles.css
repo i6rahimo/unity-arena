@@ -1,38 +1,40 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"); */
 
+@font-face {
+  font-family: 'Akzidenz-Light';
+  src: url('/assets/fonts/AkzidenzGroteskPro-Light.woff');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Akzidenz-Regular';
+  src: url('/assets/fonts/AkzidenzGroteskPro-Regular.woff'); 
+  font-weight: 400;
+}
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem;
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(228, 66%, 53%);
-  --first-color-alt: hsl(228, 66%, 47%);
-  --first-color-light: hsl(228, 62%, 59%);
-  --first-color-lighten: hsl(228, 100%, 97%);
-  --second-color: hsl(25, 83%, 53%);
-  --title-color: hsl(228, 57%, 28%);
-  --text-color: hsl(228, 15%, 50%);
-  --text-color-light: hsl(228, 12%, 75%);
-  --border-color: hsl(228, 99%, 98%);
-  --body-color: #fff;
-  --container-color: #fff;
+  --white: #FFFFFF;
+  --body-color: #020202;
+  --blue: #2F1EDB;
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: 'Poppins', sans-serif;
-  --biggest-font-size: 2.25rem;
-  --h1-font-size: 1.5rem;
-  --h2-font-size: 1.25rem;
-  --h3-font-size: 1rem;
-  --normal-font-size: .938rem;
-  --small-font-size: .813rem;
-  --smaller-font-size: .75rem;
+  --body-font-light: 'Akzidenz-Light', sans-serif;
+  --body-font-regular: 'Akzidenz-Regular', sans-serif;
+  --biggest-font-size: 20px;
+  --h1-font-size: 48px;
+  --h2-font-size: 34px;
+  --normal-font-size: 18px;
+  --small-font-size: 16px;
+  --smaller-font-size: 14px;
 
   /*========== Font weight ==========*/
-  --font-medium: 500;
-  --font-semi-bold: 600;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
 
   /*========== z index ==========*/
   --z-tooltip: 10;
@@ -40,15 +42,15 @@
 }
 
 /* Responsive typography */
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 1024px) {
   :root {
-    --biggest-font-size: 4rem;
+    /* --biggest-font-size: 4rem;
     --h1-font-size: 2.25rem;
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
     --normal-font-size: 1rem;
     --small-font-size: .875rem;
-    --smaller-font-size: .813rem;
+    --smaller-font-size: .813rem; */
   }
 }
 
@@ -64,24 +66,30 @@ html {
 }
 
 body {
-  font-family: var(--body-font);
+  font-family: var(--body-font-light);
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
-  color: var(--text-color);
   transition: .3s; /* For animation dark mode */
 }
 
-h1, h2, h3 {
-  color: var(--title-color);
-  font-weight: var(--font-semi-bold);
+h1{
+  font-size: var(--h1-font-size);
+  color: var(--white);
+  font-weight: var(--font-weight-regular);
 }
 
+h2 {
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-weight-light);
+  color: var(--white);
+}
 ul {
   list-style: none;
 }
 
 a {
   text-decoration: none;
+  color: var(--white);
 }
 
 img {
@@ -96,56 +104,177 @@ button {
   border: none;
 }
 
-/*=============== THEME ===============*/
-
-
-/*========== Variables Dark theme ==========*/
-
-
-/*========== 
-    Color changes in some parts of 
-    the website, in dark theme 
-==========*/
-
-
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
-  max-width: 1024px;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+  max-width: 1144px;
+  margin: auto;
+  padding: 0 15px ;
 }
 
-.grid {
-  display: grid;
-}
+
 
 .section {
-  padding: 4.5rem 0 2rem;
+  margin: 150px 0 0;
 }
 
 .section__title {
   font-size: var(--h2-font-size);
-  margin-bottom: 1rem;
+  color: var(--white);
 }
 
-.section__title span {
-  color: var(--second-color);
+
+
+/* ====================== HEADER ====================== */
+.header {
+
+  /* height: 1000px; */
+}
+.header__inner {
+  padding: 43px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__ul {
+  display: flex;
+  gap: 52px;
+}
+.header__link {
+  font-weight: var(--font-weight-regular);
+  font-size: var(--normal-font-size);
+  line-height: 21px;
+}
+.header__btns {
+  display: flex;
+  gap: 20px;
+}
+.header__btns-tel {
+ position: relative;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ width: 187px;
+ max-width: 100%;
+ height: 40px;
+ font-size: var(--smaller-font-size);
+ color: var(--white);
+ font-weight: var(--font-weight-regular);
+}
+.btn-link {
+  font-weight: var(--body-font-regular);
+}
+.header__btns-tel::after {
+  content: url('/assets/img/layer1.svg');
+  position: absolute;
+  z-index: -1;
+  top: -1px;
+}
+.header__btns-tel::before {
+  content: url('/assets/img/layer2.svg');
+  position: absolute;
+  z-index: -1;
+  top: 6px;
+  left: 6px;
+}
+.header__btns-order {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 187px;
+  max-width: 100%;
+  height: 40px;
+  color: var(--white);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--smaller-font-size);
+  background: none;
+  cursor: pointer;
+  line-height: 18px;
 }
 
-.section__subtitle {
-  display: block;
-  font-size: var(--small-font-size);
-  color: var(--second-color);
+.header__btns-order::after {
+  content: url('/assets/img/layer2.svg');
+  position: absolute;
+  z-index: -1;
+  top: -1px;
+}
+.header__btns-order::before {
+  content: url('/assets/img/layer1.svg');
+  position: absolute;
+  z-index: -1;
+  top: 6px;
+  left: 6px;
 }
 
-.main {
-  overflow: hidden; /* For the animations ScrollReveal*/
+.home {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  /* max-height: 1000px; */
+  z-index: -2;
 }
 .video {
-  position: absolute;
-  inset: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-slide {
+  position: relative;
+  max-height: 1000px;
+}
+
+.swiper-img img {
+  width: 100%;
+}
+.swiper-img-three img{
+  /* height: 450px; */
+}
+.swiper__text {
+ position: absolute;
+ bottom: 0;
+ width: 1114px;
+ max-width: 100%;
+ right: 0;
+ left: 0;
+ margin: auto;
+}
+.swiper-title {
+  text-transform: uppercase;
+  font-weight: var(--font-weight-regular);
+  line-height: 61px;
+  margin: 0 0 10px;
+}
+.swiper-subtitle {
+  font-size: var(--biggest-font-size);
+  color: var(--white);
+  line-height: 26px;
+}
+.swiper__text-down {
+  margin: 54px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.swiper__down-link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.swiper__down-more a {
+  text-decoration: underline;
+}
+.swiper-pagination-bullet {
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+  border: 2px solid #2F1EDB;
+  background: none;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  border: 2px solid var(--white);
 }
 /*=============== HEADER & NAV ===============*/
 
