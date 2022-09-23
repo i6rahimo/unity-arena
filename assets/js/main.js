@@ -19,11 +19,16 @@ const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
-
+    slideClass: 'stock-swiper-slide',
+    wrapperClass: 'stock-swiper-wrapper',
     pagination: {
-      el: '.stock-swiper-pagination',
-      type: 'number',
+      el: '.stock-swiper-pagination-up',
+      type: 'progressbar',
     },
+    // pagination: {
+    //   el: '.stock-swiper-pagination',
+    //   type: 'fraction',
+    // },
   });
   
   const headerNav = document.querySelector('.header__nav'),
