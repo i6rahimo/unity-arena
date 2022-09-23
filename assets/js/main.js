@@ -14,8 +14,16 @@ const swiper = new Swiper('.swiper', {
       type: 'bullets',
       clickable: true,
     },
-  
- 
+  });
+  const stockSwiper = new Swiper('.stock-swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+
+    pagination: {
+      el: '.stock-swiper-pagination',
+      type: 'number',
+    },
   });
   
   const headerNav = document.querySelector('.header__nav'),
