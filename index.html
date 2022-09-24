@@ -5,7 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         
         <!--=============== SWIPER CSS ===============-->
-        <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
+        <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+      />
 
         <!--=============== CSS ===============-->
         <link rel="stylesheet" href="/assets/css/styles.css">
@@ -178,16 +181,18 @@
                       <div class="stock-swiper-slide">Slide 1</div>
                       <div class="stock-swiper-slide">Slide 2</div>
                       <div class="stock-swiper-slide">Slide 3</div>
+                      
                     </div>
                     <!-- If we need pagination -->
                     <!-- <div class="stock-swiper-scrollbar"></div> -->
                     <div class="stock-pagination">
-                        <div class="stock-swiper-pagination-up">
-                        </div>
+                   
+                        
                         <div class="stock-swiper-pagination-down">
                             <div class="pagination-down-text">Листай <img src="/assets/img/next.svg" alt="Стрелка вперед"></div>
-                            <div class="stock-swiper-pagination"></div>
+                            <div class="stock-swiper-pagination"><span class="current-page">1</span>/3</div>
                         </div>
+                        <div class="swiper-scrollbar"></div>
                     </div>
                     <!-- If we need scrollbar -->
                   </div>
@@ -200,14 +205,9 @@
         </footer>
 
 
-        <!--========== SCROLL UP ==========-->
 
-
-
-        <!--=============== SWIPER JS ===============-->
-        <script src="/assets/js/swiper-bundle.min.js"></script>
-
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
         <!--=============== MAIN JS ===============-->
-        <script src="/assets/js/main.js"></script>
+        <script src="/assets/js/main.js" type="module"></script>
     </body>
 </html>

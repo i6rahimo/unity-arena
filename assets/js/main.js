@@ -1,7 +1,9 @@
 
+import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js';
 
 const swiper = new Swiper('.swiper', {
-    // Optional parameters
+  // Optional parameters
+    // modules: [ Navigation, Pagination],
     direction: 'horizontal',
     loop: true,
     autoplay: {
@@ -18,19 +20,22 @@ const swiper = new Swiper('.swiper', {
   const stockSwiper = new Swiper('.stock-swiper', {
     // Optional parameters
     direction: 'horizontal',
-    loop: true,
+    // loop: true,
     slideClass: 'stock-swiper-slide',
     wrapperClass: 'stock-swiper-wrapper',
-    pagination: {
-      el: '.stock-swiper-pagination-up',
-      type: 'progressbar',
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      dragSize: '174',
+      draggable: true,
     },
-    // pagination: {
-    //   el: '.stock-swiper-pagination',
-    //   type: 'fraction',
-    // },
+    pagination: {
+      el: '.stock-swiper-pagination',
+      type: 'fraction',
+    },
   });
-  
+
+
+
   const headerNav = document.querySelector('.header__nav'),
         headerBtn = document.querySelector('.header__close'),
         SpanUp = document.querySelector('.span-up'),
