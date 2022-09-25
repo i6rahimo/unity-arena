@@ -25,13 +25,14 @@ const swiper = new Swiper('.swiper', {
     wrapperClass: 'stock-swiper-wrapper',
     scrollbar: {
       el: '.swiper-scrollbar',
-      dragSize: '174',
+      // dragSize: '174',
       draggable: true,
     },
     pagination: {
       el: '.stock-swiper-pagination',
       type: 'fraction',
     },
+   
   });
 
 
