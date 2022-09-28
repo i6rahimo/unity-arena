@@ -136,20 +136,21 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 852px;
+  width: 843px;
   max-width: 100%;
   margin: 0 0 0 20px;
 }
 .header__inner {
   position: fixed;
-  width: 1104px;
+  width: 1164px;
   max-width: 100%;
   display: flex;
-  top: 0;
-  padding: 43px 37px 0 37px;
+  height: 125px;
   justify-content: space-between;
   align-items: center;
   z-index: 1231231231;
+  padding: 0 15px 0 15px;
+  margin: 0 15px 0 15px;
 }
 .header__ul {
   display: flex;
