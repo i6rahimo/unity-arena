@@ -39,7 +39,7 @@
                         <div class="header__btns-tel">
                             <a class="btn-link" href="tel:+89888889902">8 (988) 888-99-02</a>
                         </div>
-                        <a class="header__btns-order">Забронировать</a>
+                        <a href="#form" class="header__btns-order">Забронировать</a>
                     </div>
                 </nav>
                 <div class="header__close">
@@ -70,7 +70,7 @@
                                 <p class="swiper-subtitle">Компьютерный клуб на ул. Селезнева, 87</p>
                                 <div class="swiper__text-down swiper__down">
                                     <div class="swiper__down-more">
-                                        <a href="#">Подробнее</a>
+                                        <a href="#about">Подробнее</a>
                                     </div>
                                     <div class="swiper__down-link">
                                         <a href="tel:+89888889902">8 (988) 888-88-02</a>
@@ -97,7 +97,7 @@
                               <p class="swiper-subtitle">Компьютерный клуб на ул. Селезнева, 87</p>
                               <div class="swiper__text-down swiper__down">
                                   <div class="swiper__down-more">
-                                      <a href="#">Подробнее</a>
+                                      <a href="#about">Подробнее</a>
                                   </div>
                                   <div class="swiper__down-link">
                                       <a href="tel:+89888889902">8 (988) 888-88-02</a>
@@ -122,7 +122,7 @@
                               <p class="swiper-subtitle">Компьютерный клуб на ул. Селезнева, 87</p>
                               <div class="swiper__text-down swiper__down">
                                   <div class="swiper__down-more">
-                                      <a href="#">Подробнее</a>
+                                      <a href="#about">Подробнее</a>
                                   </div>
                                   <div class="swiper__down-link">
                                       <a href="tel:+89888889902">8 (988) 888-88-02</a>
@@ -147,8 +147,8 @@
         <main class="main container">
             <!--==================== HOME ====================-->
             
-            <section class="about  container">
-                <div class="about__text">
+            <section  class="about  container">
+                <div class="about__text" id="about">
                         <p class="about__text-text">UNITY ARENA - это стильный, ни на что не похожий интерьер, крутая атмосфера, возможность вкусно перекусить во время игры и отличный сервис во всем.
                            <span class="text-margin">Возможность прийти одному или командой. Буткемпы, стримерские, турниры разного уровня. Но самое главное, это просто лучшее место для игры </span>
                         </p>
@@ -202,70 +202,356 @@
 
             <section class="price container section">
                 <h2 class="price__title">Прайс-лист</h2>
+                <div class="accordion__wrapper">
                 <div class="price__accordion">
                     <div class="price__accordion-block">
-                        <div class="price__accordion-title ac-flex">
-                            <p>Comfort</p>
-                            <p>Будние</p>
-                            <p>Выходные</p>
+                            <div class="price__accordion-title">
+                                <p class="price__accordion-text col-title first-title">COMFORT</p>
+                                <p class="price__accordion-text col-title second-title">БУДНИЕ</p>
+                                <p class="price__accordion-text col-title third-title">ВЫХОДНЫЕ</p>
+                                <div class="price__accordion-arrow">
+                                    <img class="arrow-img" src="/assets/img/accordino-arrow.svg" alt="Стрелка">
+                                </div>
+                            </div>
+                            <div class="price__accordion-col">
+                            <div class="first-col">
+                                <p class="price__accordion-text">утро 3 часа</p>
+                                <p class="price__accordion-text">ночь 3 часа</p>
+                                <p class="price__accordion-text">утро 5 часов</p>
+                                <p class="price__accordion-text">ночь 5 часов</p>
+                                <p class="price__accordion-text">утро 5 часов</p>
+                                <p class="price__accordion-text">ночь 5 часов</p>
+                                <p class="price__accordion-text">утро 5 часов</p>
+                                <p class="price__accordion-text">ночь 5 часов</p>
+                            </div>
+                            <div class="first-col__responsive">
+                                <p class="price__accordion-text">утро 3ч.</p>
+                                <p class="price__accordion-text">ночь 3ч.</p>
+                                <p class="price__accordion-text">утро 5ч.</p>
+                                <p class="price__accordion-text">ночь 5ч.</p>
+                                <p class="price__accordion-text">утро 5ч.</p>
+                                <p class="price__accordion-text">ночь 5ч.</p>
+                                <p class="price__accordion-text">утро 5ч.</p>
+                                <p class="price__accordion-text">ночь 5ч.</p>
+                            </div>
+                            <div class="second-col">
+                                <p class="price__accordion-text">300 руб.</p>
+                                <p class="price__accordion-text">350 руб.</p>
+                                <p class="price__accordion-text">500 руб.</p>
+                                <p class="price__accordion-text">550 руб.</p>
+                                <p class="price__accordion-text">500 руб.</p>
+                                <p class="price__accordion-text">550 руб.</p>
+                                <p class="price__accordion-text">500 руб.</p>
+                                <p class="price__accordion-text">550 руб.</p>
+                            </div>
+                            <div class="third-col">
+                                <p class="price__accordion-text">400 руб.</p>
+                                <p class="price__accordion-text">450 руб.</p>
+                                <p class="price__accordion-text">600 руб.</p>
+                                <p class="price__accordion-text">650 руб.</p>
+                                <p class="price__accordion-text">600 руб.</p>
+                                <p class="price__accordion-text">650 руб.</p>
+                                <p class="price__accordion-text">600 руб.</p>
+                                <p class="price__accordion-text">650 руб.</p>
+                            </div>
                         </div>
-                        <div class="price__accordion-items">
-                            <div class="price__accordion-item ac-flex">
-                                <p>утро 3 часа</p>
-                                <p>3000 руб.</p>
-                                <p>400 руб.</p>
+                            
+                    </div>
+                    <div class="price__accordion-block">
+                        <div class="price__accordion-title">
+                            <p class="price__accordion-text col-title first-title block-second">VIP</p>
+                            <p class="price__accordion-text col-title second-title">БУДНИЕ</p>
+                            <p class="price__accordion-text col-title third-title">ВЫХОДНЫЕ</p>
+                            <div class="price__accordion-arrow">
+                                <img class="arrow-img" src="/assets/img/accordino-arrow.svg" alt="Стрелка">
                             </div>
-
-                            <div class="price__accordion-item ac-flex">
-                                <p>утро 3 часа</p>
-                                <p>3000 руб.</p>
-                                <p>400 руб.</p>
-                            </div>
-
-                            <div class="price__accordion-item ac-flex">
-                                <p>утро 3 часа</p>
-                                <p>3000 руб.</p>
-                                <p>400 руб.</p>
-                            </div>
-
-                            <div class="price__accordion-item ac-flex">
-                                <p>утро 3 часа</p>
-                                <p>3000 руб.</p>
-                                <p>400 руб.</p>
-                            </div>
-
-                            <div class="price__accordion-item ac-flex">
-                                <p>утро 3 часа</p>
-                                <p>3000 руб.</p>
-                                <p>400 руб.</p>
-                            </div>
-
-                            <div class="price__accordion-item ac-flex">
-                                <p>утро 3 часа</p>
-                                <p>3000 руб.</p>
-                                <p>400 руб.</p>
-                            </div>
-
-                            <div class="price__accordion-item ac-flex">
-                                <p>утро 3 часа</p>
-                                <p>3000 руб.</p>
-                                <p>400 руб.</p>
-                            </div>
-
-                            <div class="price__accordion-item ac-flex">
-                                <p>утро 3 часа</p>
-                                <p>3000 руб.</p>
-                                <p>400 руб.</p>
-                            </div>
+                        </div>
+                        <div class="price__accordion-col">
+                        <div class="first-col">
+                            <p class="price__accordion-text">утро 3 часа</p>
+                            <p class="price__accordion-text">ночь 3 часа</p>
+                            <p class="price__accordion-text">утро 5 часов</p>
+                            <p class="price__accordion-text">ночь 5 часов</p>
+                            <p class="price__accordion-text">утро 5 часов</p>
+                            <p class="price__accordion-text">ночь 5 часов</p>
+                            <p class="price__accordion-text">утро 5 часов</p>
+                            <p class="price__accordion-text">ночь 5 часов</p>
+                        </div>
+                        <div class="first-col__responsive">
+                            <p class="price__accordion-text">утро 3ч.</p>
+                            <p class="price__accordion-text">ночь 3ч.</p>
+                            <p class="price__accordion-text">утро 5ч.</p>
+                            <p class="price__accordion-text">ночь 5ч.</p>
+                            <p class="price__accordion-text">утро 5ч.</p>
+                            <p class="price__accordion-text">ночь 5ч.</p>
+                            <p class="price__accordion-text">утро 5ч.</p>
+                            <p class="price__accordion-text">ночь 5ч.</p>
+                        </div>
+                        <div class="second-col">
+                            <p class="price__accordion-text">300 руб.</p>
+                            <p class="price__accordion-text">350 руб.</p>
+                            <p class="price__accordion-text">500 руб.</p>
+                            <p class="price__accordion-text">550 руб.</p>
+                            <p class="price__accordion-text">500 руб.</p>
+                            <p class="price__accordion-text">550 руб.</p>
+                            <p class="price__accordion-text">500 руб.</p>
+                            <p class="price__accordion-text">550 руб.</p>
+                        </div>
+                        <div class="third-col">
+                            <p class="price__accordion-text">400 руб.</p>
+                            <p class="price__accordion-text">450 руб.</p>
+                            <p class="price__accordion-text">600 руб.</p>
+                            <p class="price__accordion-text">650 руб.</p>
+                            <p class="price__accordion-text">600 руб.</p>
+                            <p class="price__accordion-text">650 руб.</p>
+                            <p class="price__accordion-text">600 руб.</p>
+                            <p class="price__accordion-text">650 руб.</p>
                         </div>
                     </div>
+                        
+                    </div>
+                    <div class="price__accordion-block">
+                        <div class="price__accordion-title">
+                            <p class="price__accordion-text col-title first-title block-third">PS5</p>
+                            <p class="price__accordion-text col-title second-title">БУДНИЕ</p>
+                            <p class="price__accordion-text col-title third-title">ВЫХОДНЫЕ</p>
+                            <div class="price__accordion-arrow">
+                                <img class="arrow-img" src="/assets/img/accordino-arrow.svg" alt="Стрелка">
+                            </div>
+                        </div>
+                        <div class="price__accordion-col">
+                        <div class="first-col">
+                            <p class="price__accordion-text">утро 3 часа</p>
+                            <p class="price__accordion-text">ночь 3 часа</p>
+                            <p class="price__accordion-text">утро 5 часов</p>
+                            <p class="price__accordion-text">ночь 5 часов</p>
+                            <p class="price__accordion-text">утро 5 часов</p>
+                            <p class="price__accordion-text">ночь 5 часов</p>
+                            <p class="price__accordion-text">утро 5 часов</p>
+                            <p class="price__accordion-text">ночь 5 часов</p>
+                        </div>
+                        <div class="first-col__responsive">
+                            <p class="price__accordion-text">утро 3ч.</p>
+                            <p class="price__accordion-text">ночь 3ч.</p>
+                            <p class="price__accordion-text">утро 5ч.</p>
+                            <p class="price__accordion-text">ночь 5ч.</p>
+                            <p class="price__accordion-text">утро 5ч.</p>
+                            <p class="price__accordion-text">ночь 5ч.</p>
+                            <p class="price__accordion-text">утро 5ч.</p>
+                            <p class="price__accordion-text">ночь 5ч.</p>
+                        </div>
+                        <div class="second-col">
+                            <p class="price__accordion-text">300 руб.</p>
+                            <p class="price__accordion-text">350 руб.</p>
+                            <p class="price__accordion-text">500 руб.</p>
+                            <p class="price__accordion-text">550 руб.</p>
+                            <p class="price__accordion-text">500 руб.</p>
+                            <p class="price__accordion-text">550 руб.</p>
+                            <p class="price__accordion-text">500 руб.</p>
+                            <p class="price__accordion-text">550 руб.</p>
+                        </div>
+                        <div class="third-col">
+                            <p class="price__accordion-text">400 руб.</p>
+                            <p class="price__accordion-text">450 руб.</p>
+                            <p class="price__accordion-text">600 руб.</p>
+                            <p class="price__accordion-text">650 руб.</p>
+                            <p class="price__accordion-text">600 руб.</p>
+                            <p class="price__accordion-text">650 руб.</p>
+                            <p class="price__accordion-text">600 руб.</p>
+                            <p class="price__accordion-text">650 руб.</p>
+                        </div>
+                    </div>
+                        
                 </div>
+                </div>
+                    <div class="accordion-btns">
+                        <a href="#form" class="header__btns-order accordion-btn">Забронировать</a>
+                    </div>
+                    <!-- <div class="price__accordion-block">
+                        <div class="price__accordion-content first-col">
+                            <p class="price__accordion-text col-title">VIP</p>
+                            <p class="price__accordion-text">утро 3 часа</p>
+                            <p class="price__accordion-text">ночь 3 часа</p>
+                            <p class="price__accordion-text">утро 5 часов</p>
+                            <p class="price__accordion-text">ночь 5 часов</p>
+                            <p class="price__accordion-text">утро 5 часов</p>
+                            <p class="price__accordion-text">ночь 5 часов</p>
+                            <p class="price__accordion-text">утро 5 часов</p>
+                            <p class="price__accordion-text">ночь 5 часов</p>
+                        </div>
+                        <div class="price__accordion-content second-col">
+                            <p class="price__accordion-text col-title">БУДНИЕ</p>
+                            <p class="price__accordion-text">300 руб.</p>
+                            <p class="price__accordion-text">350 руб.</p>
+                            <p class="price__accordion-text">500 руб.</p>
+                            <p class="price__accordion-text">550 руб.</p>
+                            <p class="price__accordion-text">500 руб.</p>
+                            <p class="price__accordion-text">550 руб.</p>
+                            <p class="price__accordion-text">500 руб.</p>
+                            <p class="price__accordion-text">550 руб.</p>
+                        </div>
+                        <div class="price__accordion-content third-col">
+                            <p class="price__accordion-text col-title">ВЫХОДНЫЕ</p>
+                            <p class="price__accordion-text">400 руб.</p>
+                            <p class="price__accordion-text">450 руб.</p>
+                            <p class="price__accordion-text">600 руб.</p>
+                            <p class="price__accordion-text">650 руб.</p>
+                            <p class="price__accordion-text">600 руб.</p>
+                            <p class="price__accordion-text">650 руб.</p>
+                            <p class="price__accordion-text">600 руб.</p>
+                            <p class="price__accordion-text">650 руб.</p>
+                        </div>
+                        <div class="price__accordion-arrow">
+                            <img class="arrow-img" src="/assets/img/accordino-arrow.svg" alt="Стрелка">
+                        </div>
+                    </div>
+                    <div class="price__accordion-block">
+                        <div class="price__accordion-content first-col">
+                            <p class="price__accordion-text col-title">PS5</p>
+                            <p class="price__accordion-text">утро 3 часа</p>
+                            <p class="price__accordion-text">ночь 3 часа</p>
+                            <p class="price__accordion-text">утро 5 часов</p>
+                            <p class="price__accordion-text">ночь 5 часов</p>
+                            <p class="price__accordion-text">утро 5 часов</p>
+                            <p class="price__accordion-text">ночь 5 часов</p>
+                            <p class="price__accordion-text">утро 5 часов</p>
+                            <p class="price__accordion-text">ночь 5 часов</p>
+                        </div>
+                        <div class="price__accordion-content second-col">
+                            <p class="price__accordion-text col-title">БУДНИЕ</p>
+                            <p class="price__accordion-text">300 руб.</p>
+                            <p class="price__accordion-text">350 руб.</p>
+                            <p class="price__accordion-text">500 руб.</p>
+                            <p class="price__accordion-text">550 руб.</p>
+                            <p class="price__accordion-text">500 руб.</p>
+                            <p class="price__accordion-text">550 руб.</p>
+                            <p class="price__accordion-text">500 руб.</p>
+                            <p class="price__accordion-text">550 руб.</p>
+                        </div>
+                        <div class="price__accordion-content third-col">
+                            <p class="price__accordion-text col-title">ВЫХОДНЫЕ</p>
+                            <p class="price__accordion-text">400 руб.</p>
+                            <p class="price__accordion-text">450 руб.</p>
+                            <p class="price__accordion-text">600 руб.</p>
+                            <p class="price__accordion-text">650 руб.</p>
+                            <p class="price__accordion-text">600 руб.</p>
+                            <p class="price__accordion-text">650 руб.</p>
+                            <p class="price__accordion-text">600 руб.</p>
+                            <p class="price__accordion-text">650 руб.</p>
+                        </div>
+                        <div class="price__accordion-arrow">
+                            <img class="arrow-img" src="/assets/img/accordino-arrow.svg" alt="Стрелка">
+                        </div>
+                    </div> -->
+                </div>
+                </div>
+            </section>
+
+            <section class="room container section">
+                <h2 class="room__title">Посмотри какой у нас офигенный интерьер</h2>
+                <div class="room-swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="room-wrapper">
+                      <!-- Slides -->
+                      <div class="room-slide"><img src="/assets/img/room1.png" alt="Комнаты"></div>
+                      <div class="room-slide"><img src="/assets/img/room2.png" alt="Комнаты"></div>
+                      <div class="room-slide"><img src="/assets/img/room3.png" alt="Комнаты"></div>
+                      <div class="room-slide"><img src="/assets/img/room3.png" alt="Комнаты"></div>
+                      <div class="room-slide"><img src="/assets/img/room3.png" alt="Комнаты"></div>
+                      <div class="room-slide"><img src="/assets/img/room3.png" alt="Комнаты"></div>
+                      <div class="room-slide"><img src="/assets/img/room3.png" alt="Комнаты"></div>
+                      <div class="room-slide"><img src="/assets/img/room3.png" alt="Комнаты"></div>
+
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="room-swiper-scrollbar"></div>
+                    <div class="room-swiper-pagination">
+                        <div class="pagination-down-text">Листай! <img src="/assets/img/next.svg" alt="Стрелка вперед"></div>
+                        <div class="stock-swiper-pagination"><span class="current-page">1</span>/3</div>
+                    </div>
+                
+                    <!-- If we need scrollbar -->
+                  </div>
+            </section>
+
+            <section class="order container section">
+                <div class="order__wrapper">
+                <h2 class="order__title">Бронируй</h2>
+                <form id="form" action="" class="order__form">
+                    <div class="form__input">
+                        <input type="text" name="name" id="" placeholder="Иван Иванов" required>
+                    </div>
+                    <div class="form__input">
+                        <input type="tel" name="phone" id="phone" placeholder="8 (000) 000-00-00" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required maxlength="11" >
+                    </div>
+                    <div class="form__input select-data">
+                        <label for="data">
+                            <input type="date" name="data" id="data" class="data"  required value="2022-12-07" >
+                        </label>
+                    </div>
+                    <div class="form__input">
+                        <label for="time" class="time-label">
+                            <input class="input-time" name="time" type="time"  id="time" value="21:00" max="07:00" min="00:00">
+                        </label>
+                    </div>
+                    <div class="form__input">
+                        <input type="text" name="playerNumber" id="playernumber" placeholder="Количество игроков" max="24" min="0" required>
+                    </div>
+                    <div class="form__input select-form">
+                        <input type="text" name="room" class="select-form-input" placeholder="Выбрать зал">
+                        <div class="select-list">
+                            <p>COMFORT</p>
+                            <p>VIP</p>
+                            <p>PS5</p>
+                        </div>
+                        <span class="custom-arrow"></span> 
+                    </div> 
+                        <!-- <input list="input-list" placeholder="Выбрать зал">
+
+                        <datalist class="input-list" id="input-list" >
+                          <option value="CPMFORT">
+                          <option value="VIP">
+                          <option value="PS5">
+                        </datalist>  -->
+                        <a class="header__btns-order">Забронировать</a>
+                    </div>
+                </form>
+            </div>
+            </section>
+
+            <section class="address container section">
+                <address class="address__content">
+                    <div class="address__text">
+                        <p class="address__text-title">КОНТАКТЫ</p>
+                        <p class="address__text-location">г. Краснодар, 
+                            ул. Селезнёва, 87, 4 этаж</p>
+                            <a class="address__text-email" href="mailto:unity.arena@yandex.ru">unity.arena@yandex.ru</a>
+                            <a class="address__text-phone" href="tel:+89888889902">8 (988) 888-99-02</a>
+                            <div class="address__text-social">
+                                <a href="http://"><img src="/assets/img/telegram.svg" alt="Телеграм"></a>
+                                <a href="http://"><img src="/assets/img/whatsapp.svg" alt="Ватсап"></a>
+                                <a href="https://vk.com/unity_arena"><img src="/assets/img/vk.svg" alt="Вконтакте"></a>
+                            </div>
+                        </div>
+                        <div class="address__map">
+                        <h2 class="address__title">КАК НАС НАЙТИ:</h2>
+                        <picture>
+                            <source media="(min-width: 400px)" srcset="/assets/img/map.png">
+                            <img src="/assets/img/map2.png" alt="Карта">
+                        </picture>
+                    </div>
+                </address>
             </section>
         </main>
 
         <!--==================== FOOTER ====================-->
         <footer class="footer section">
-            
+            <div class="footer__wrapper">
+                <div class=" footer__logo"><img src="/assets/img/footer-logo.svg" alt="Футер лого"></div>
+                <div class="footer___text footer__name">© 2022. UNITY ARENA</div>
+                <div class="footer___text footer__politic">Политика конфиденциальности</div>
+                <div class="footer___text footer__data">Обработка персональных данных</div>
+            </div>
         </footer>
 
 
