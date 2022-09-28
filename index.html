@@ -461,6 +461,8 @@
                       <div class="room-slide"><img src="/assets/img/room3.png" alt="Комнаты"></div>
                       <div class="room-slide"><img src="/assets/img/room3.png" alt="Комнаты"></div>
                       <div class="room-slide"><img src="/assets/img/room3.png" alt="Комнаты"></div>
+                      <div class="room-slide"><img src="/assets/img/room3.png" alt="Комнаты"></div>
+                      <div class="room-slide"><img src="/assets/img/room3.png" alt="Комнаты"></div>
 
                     </div>
                     <!-- If we need pagination -->
@@ -528,17 +530,14 @@
                             <a class="address__text-email" href="mailto:unity.arena@yandex.ru">unity.arena@yandex.ru</a>
                             <a class="address__text-phone" href="tel:+89888889902">8 (988) 888-99-02</a>
                             <div class="address__text-social">
-                                <a href="http://"><img src="/assets/img/telegram.svg" alt="Телеграм"></a>
-                                <a href="http://"><img src="/assets/img/whatsapp.svg" alt="Ватсап"></a>
-                                <a href="https://vk.com/unity_arena"><img src="/assets/img/vk.svg" alt="Вконтакте"></a>
+                                <a target="_blank" href="http://"><img src="/assets/img/telegram.svg" alt="Телеграм"></a>
+                                <a target="_blank" href="http://"><img src="/assets/img/whatsapp.svg" alt="Ватсап"></a>
+                                <a target="_blank" href="https://vk.com/unity_arena"><img src="/assets/img/vk.svg" alt="Вконтакте"></a>
                             </div>
                         </div>
                         <div class="address__map">
                         <h2 class="address__title">КАК НАС НАЙТИ:</h2>
-                        <picture>
-                            <source media="(min-width: 400px)" srcset="/assets/img/map.png">
-                            <img src="/assets/img/map2.png" alt="Карта">
-                        </picture>
+                        <div class="map" id="map"></div>
                     </div>
                 </address>
             </section>
@@ -557,6 +556,7 @@
 
 
         <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <script src="https://api-maps.yandex.ru/2.1/?apikey=75f7a3a2-cf88-4d61-9598-c4c02aeb7b23&lang=ru_RU"></script>
         <!--=============== MAIN JS ===============-->
         <script src="/assets/js/main.js" type="module"></script>
     </body>

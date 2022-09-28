@@ -25,14 +25,17 @@ const swiper = new Swiper('.swiper', {
     wrapperClass: 'stock-swiper-wrapper',
     scrollbar: {
       el: '.swiper-scrollbar',
-      // dragSize: '174',
+      dragSize: '174',
       draggable: true,
     },
     pagination: {
       el: '.stock-swiper-pagination',
       type: 'fraction',
     },
-   
+    navigation: {
+      nextEl: '.pagination-down-text',
+
+    },
   });
   const roomSwiper = new Swiper('.room-swiper', {
     // Optional parameters
@@ -41,9 +44,13 @@ const swiper = new Swiper('.swiper', {
     spaceBetween: 20,
     slideClass: 'room-slide',
     wrapperClass: 'room-wrapper',
+    navigation: {
+      nextEl: '.pagination-down-text',
+
+    },
     scrollbar: {
       el: '.room-swiper-scrollbar',
-      // dragSize: '174',
+      dragSize: '174',
       draggable: true,
     },
     pagination: {
@@ -116,3 +123,39 @@ function chekPlayer(e) {
   }
   return playernum
 }
+
+window.addEventListener('scroll', scrollHeader);
+function scrollHeader(){
+  const headerInner = document.querySelector('.header__inner');
+  // if(this.scrollY >= 20)
+  // When the scroll is greater than 80 viewport height, add the scroll-header class to the header tag
+  if(this.scrollY >= 20) headerInner.classList.add('headerbg');
+  else  headerInner.classList.remove('headerbg');
+};
+
+let center = [45.02736611000037,39.02762492394255];
+
+function init() {
+	let map = new ymaps.Map('map', {
+		center: center,
+		zoom: 17
+	});
+  let placemark = new ymaps.Placemark([45.02736611000037,39.02762492394255], {}, {
+		iconLayout: 'default#image',
+		iconImageHref: '../img/maplogo.svg',
+		iconImageSize: [40, 40],
+		iconImageOffset: [-19, -44]
+	});
+
+	map.controls.remove('geolocationControl'); // удаляем геолокацию
+  map.controls.remove('searchControl'); // удаляем поиск
+  map.controls.remove('trafficControl'); // удаляем контроль трафика
+  map.controls.remove('typeSelector'); // удаляем тип
+  map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+  map.controls.remove('zoomControl'); // удаляем контрол зуммирования
+  map.controls.remove('rulerControl'); // удаляем контрол правил
+  map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
+  map.geoObjects.add(placemark);
+}
+
+ymaps.ready(init);

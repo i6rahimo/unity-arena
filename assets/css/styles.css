@@ -150,7 +150,27 @@ button {
   align-items: center;
   z-index: 1231231231;
   padding: 0 15px 0 15px;
-  margin: 0 15px 0 15px;
+}
+.header__inner.headerbg {
+  width: 100%;
+  max-width: 1114px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #020202;
+  /* height: 125px; */
+}
+.header__inner.headerbg::after {
+  content: '';
+  display: block;
+  position: fixed;
+  width: 100vw;
+  height: 125px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  background: #020202;
+  z-index: -2;
 }
 .header__ul {
   display: flex;
@@ -394,7 +414,7 @@ button {
   justify-content: end;
 }
 .about__text-text {
-  width: 756px;
+  width: 598px;
   max-width: 100%;
   margin: 150px 0 0;
   font-size: var(--normal-font-size);
@@ -468,15 +488,15 @@ button {
   box-shadow:  0px 0px 10px 4px rgba(47, 30, 219, 0.71);;
 }
 
-.swiper-scrollbar.swiper-scrollbar-horizontal {
+ .swiper-scrollbar.swiper-scrollbar-horizontal {
   left: 0%;
   width: 100%;
 }
 .swiper-scrollbar-drag {
-  max-width: 174px;
+  /* max-width: 174px; */
   background: var(--white);
   border-radius: 0;
-}
+} 
 
 .stock-swiper-pagination-down {
   display: flex;
@@ -484,6 +504,9 @@ button {
   justify-content: space-between;
   width: 100%;
   /* order: -1; */
+}
+.pagination-down-text {
+  cursor: pointer;
 }
 
 .stock-swiper-pagination {
@@ -741,6 +764,9 @@ button {
   position: relative;
   z-index: 1;
 }
+.select-form-input{
+  cursor: pointer;
+}
   .custom-arrow {
     background: url(../img/accordino-arrow.svg);
     display: block;
@@ -874,6 +900,10 @@ datalist::after {
   position: absolute;
 }
 
+.map {
+  width: 854px;
+  height: 490px;
+}
 
 
 /* ==================  FOOTER =============== */
@@ -945,6 +975,9 @@ datalist::after {
   }
 }
 @media  (max-width: 950px) {
+  .header__inner {
+    padding: 0 35px 0 0;
+  }
   .header__nav {
     position: fixed;
     right:  0;
