@@ -3,7 +3,7 @@
 
 @font-face {
   font-family: 'Akzidenz-Light';
-  src: url('/assets/fonts/AkzidenzGroteskPro-Light.woff'); 
+  src: url('/assets/fonts/akzidenzgroteskpro_lightex.ttf'); 
 }
 @font-face {
   font-family: 'Akzidenz-Regular';
@@ -521,7 +521,8 @@ button {
   justify-content: space-between;
   gap: 10px;
 }
-.price__accordion-text {
+.price__accordion-text p {
+  /* font-size: 16px; */
   font-size: var(--small-font-size);
   font-family: var(--body-font-light);
 }
@@ -533,21 +534,22 @@ button {
   max-width: 100%;
 }
 .first-col {
+
   grid-area: first;
-  width: 90px;
+  /* max-width: 100%; */
   display: flex;
     flex-direction: column;
     gap: 24px;
 }
 .second-col {
-    width: 90px;
+    /* width: 90px; */
     grid-area: second;
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
 .third-col {
-  width: 90px;
+  /* width: 90px; */
   grid-area: third;
   display: flex;
   flex-direction: column;
@@ -571,7 +573,7 @@ button {
 .price__accordion-col {
   display: flex;
   /* justify-content: space-between; */
-  gap: 18%;
+  gap: 17%;
 }
 .accordion__wrapper {
   display: flex;
@@ -621,8 +623,6 @@ button {
 }
 .col-title {
   margin: 0 0 45px;
-}
-.price__accordion-block {
 }
 
 .price__accordion-arrow {
@@ -1102,12 +1102,13 @@ datalist::after {
     grid-template-areas: 'first-title first-title first-title arrow' '. second-title third-title third-title';
     /* gap: 20px; */
   }
-  .second-col {
-    width: 55px;
+  .first-col {
+    /* max-width: 63px; */
   }
-  .third-col {
-    width: 55px;
+  .second-col, .third-col {
+    /* max-width: 67px; */
   }
+
   .second-title {
     margin-left: 50px;
   }
@@ -1215,7 +1216,20 @@ datalist::after {
     font-size: 14px;
   }
 }
-
+@media (max-width: 400px) {
+  .price__accordion-col {
+    gap: 12%;
+  }
+}
+@media (max-width: 350px) {
+  .price__accordion-col {
+    gap: 5%;
+  }
+  .price__accordion-block {
+    padding: 20px 0px 25px 0px;
+    max-height: 61px;
+  }
+}
 @media (max-width: 500px) {
   .footer__wrapper {
     grid-template-areas: 'logo . name''politic politic politic' 'data data data';
@@ -1288,6 +1302,6 @@ height: 333px;
 
 @media  (min-width: 361px) {
   .block-third, .block-second {
-    width: 76px;
+    width: 111px;
   }
 }
