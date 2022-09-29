@@ -63,7 +63,7 @@ picture {
 }
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 300px;
+  scroll-padding-top: 250px;
 }
 
 body {
@@ -320,6 +320,9 @@ button {
   height: 100%;
   /* object-fit: cover; */
 }
+#slide3 source {
+  margin: -60px 0 0;
+}
 .swiper {
   position: relative;
 }
@@ -506,7 +509,8 @@ button {
 }
 
 .stock-swiper-pagination {
-  width: 32px;
+
+  width: 40px;
   display: flex;
   font-size: var(--normal-font-size);
 }
