@@ -120,10 +120,14 @@ const swiper = new Swiper('.swiper', {
 
 
   const accordion = document.querySelectorAll('.price__accordion-block');
-  const accordionArrow = document.querySelectorAll('.arrow-img');
+  // const accordionArrow = document.querySelectorAll('.arrow-img');
   accordion.forEach((e)=> {
     e.addEventListener('click', (el) => {
-    e.classList.toggle('show')
+      const self = el.currentTarget;
+      const arrow = self.querySelector('.arrow-img');
+      console.log(arrow);
+      self.classList.toggle('show');
+      arrow.classList.toggle('show')
   })})
   
 const select = document.querySelector('.select-form').addEventListener('click', showSelect);
@@ -177,14 +181,14 @@ function init() {
 		iconImageOffset: [-19, -44]
 	});
 
-	map.controls.remove('geolocationControl'); // удаляем геолокацию
+	// map.controls.remove('geolocationControl'); // удаляем геолокацию
   map.controls.remove('searchControl'); // удаляем поиск
   map.controls.remove('trafficControl'); // удаляем контроль трафика
   map.controls.remove('typeSelector'); // удаляем тип
-  map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
-  map.controls.remove('zoomControl'); // удаляем контрол зуммирования
-  map.controls.remove('rulerControl'); // удаляем контрол правил
-  map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
+  // map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+  // map.controls.remove('zoomControl'); // удаляем контрол зуммирования
+  // map.controls.remove('rulerControl'); // удаляем контрол правил
+  // map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
   map.geoObjects.add(placemark);
 }
 
@@ -205,11 +209,34 @@ function sendMessage() {
 
 
 const closePopup = document.querySelector('.close-popup').addEventListener('click', popupClose);
-const backClosePopup = document.querySelector('.popup__back').addEventListener('click', closeWithBack);
-
-function closeWithBack() {
-  this.classList.remove('show')
+const popup = document.querySelector('.popup__back')
+// const backClosePopup = document.querySelector('.popup__back').addEventListener('click', closeWithBack);
+const openPopupBtn = document.querySelector('.form__send-btn').addEventListener('click', openPopup);
+function openPopup() {
+  popup.classList.add('show')
 }
+
+// function closeWithBack() {
+//   this.classList.remove('show')
+// }
 function popupClose() {
-  this.classList.remove('show')
+  console.log('err');
+  popup.classList.remove('show')
+}
+
+
+
+
+const maxPlayrInput = document.querySelector('#playernumber');
+maxPlayrInput.addEventListener('input', function maxLengthPlayer (number){});
+function maxLengthPlayer(number) {
+  const str = '';
+  console.log(number.value);
+  // number.map(num => num > 24 ? console.log('erro') : console.log('yes'))
+  // this.placeholder = 'Введите цифру'
+  // if(this.value > 24)  { 
+    // this.value = 'Введите цифру от 1 до 24';
+  // } 
+
+
 }
