@@ -476,25 +476,25 @@
                   </div>
             </section>
 
-            <section class="order container section">
-                <div class="order__wrapper">
+            <section class="order container ">
+                <div class="order__wrapper ">
                 <h2 class="order__title">Бронируй</h2>
                 <form id="form" action="" class="order__form">
                     <div class="form__input">
                         <input type="text" name="name" id="" placeholder="Иван Иванов" required>
                     </div>
                     <div class="form__input">
-                        <input type="tel" name="phone" id="phone" placeholder="8 (000) 000-00-00" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required maxlength="11" >
+                        <input type="tel" name="phone" id="phone" placeholder="8 (000) 000-00-00" required maxlength="11" >
                     </div>
                     <div class="form__input select-data">
                         <label for="data">
-                            <input type="date" name="data" id="data" class="data"  required value="2022-12-07" >
+                            <input type="text" name="data" id="data" class="data"  required placeholder="12 сентября 2022" >
                         </label>
                     </div>
                     <div class="form__input">
-                        <label for="time" class="time-label">
-                            <input class="input-time" name="time" type="time"  id="time" value="21:00" max="07:00" min="00:00">
-                        </label>
+                   
+                            <input class="input-time" name="time" type="text"  id="time" placeholder="21:00">
+                  
                     </div>
                     <div class="form__input">
                         <input type="text" name="playerNumber" id="playernumber" placeholder="Количество игроков" max="24" min="0" required>
@@ -515,9 +515,18 @@
                           <option value="VIP">
                           <option value="PS5">
                         </datalist>  -->
-                        <a class="header__btns-order">Забронировать</a>
+                        <button class="form__send-btn header__btns-order">Забронировать</button>
                     </div>
                 </form>
+            </div>
+            <div class="popup">
+                <div class="popup__back show">
+                    <div class="popup__wrapper">
+                        <img class="close-popup" src="/assets/img/popupclose.svg" alt="Закрыть">
+                        <img src="/assets/img/popup-done.svg" alt="Успешно">
+                        <p class="popup-text">ваша заявка успешно отправлена</p>
+                    </div>
+                </div>
             </div>
             </section>
 
@@ -548,8 +557,8 @@
             <div class="footer__wrapper">
                 <div class=" footer__logo"><img src="/assets/img/footer-logo.svg" alt="Футер лого"></div>
                 <div class="footer___text footer__name">© 2022. UNITY ARENA</div>
-                <div class="footer___text footer__politic">Политика конфиденциальности</div>
-                <div class="footer___text footer__data">Обработка персональных данных</div>
+                <a href="/assets/files/privacy.pdf" download="" class="footer___text footer__politic">Политика конфиденциальности</a>
+                <a href="/assets/files/processing.pdf" download="" class="footer___text footer__data">Обработка персональных данных</a>
             </div>
         </footer>
 

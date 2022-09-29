@@ -34,8 +34,23 @@ const swiper = new Swiper('.swiper', {
     },
     navigation: {
       nextEl: '.pagination-down-text',
-
     },
+    breakpoints: {
+      320: {
+        scrollbar: {
+          el: '.swiper-scrollbar',
+          dragSize: '110',
+          draggable: true,
+        },
+      },
+      361: {
+        scrollbar: {
+          el: '.swiper-scrollbar',
+          dragSize: '174',
+          draggable: true,
+        },
+      }
+    }
   });
   const roomSwiper = new Swiper('.room-swiper', {
     // Optional parameters
@@ -71,7 +86,22 @@ const swiper = new Swiper('.swiper', {
       360: {
     spaceBetween: 0,
     slidesPerView: 1,
+      },
+      320: {
+        scrollbar: {
+          el: '.swiper-scrollbar',
+          dragSize: '110',
+          draggable: true,
+        },
+      },
+      361: {
+        scrollbar: {
+          el: '.swiper-scrollbar',
+          dragSize: '174',
+          draggable: true,
+        },
       }
+
     }
   });
 
@@ -142,7 +172,7 @@ function init() {
 	});
   let placemark = new ymaps.Placemark([45.02736611000037,39.02762492394255], {}, {
 		iconLayout: 'default#image',
-		iconImageHref: '../img/maplogo.svg',
+		iconImageHref: '/assets/img/maplogo.svg',
 		iconImageSize: [40, 40],
 		iconImageOffset: [-19, -44]
 	});
@@ -159,3 +189,27 @@ function init() {
 }
 
 ymaps.ready(init);
+
+
+
+
+const sendOrder = document.querySelector('.form__send-btn').addEventListener('click', sendMessage);
+
+function sendMessage() {
+  let xhr = new XMLHttpRequest();
+
+  xhr.open('POST', '../../telegram.php');
+
+  xhr.send()
+}
+
+
+const closePopup = document.querySelector('.close-popup').addEventListener('click', popupClose);
+const backClosePopup = document.querySelector('.popup__back').addEventListener('click', closeWithBack);
+
+function closeWithBack() {
+  this.classList.remove('show')
+}
+function popupClose() {
+  this.classList.remove('show')
+}
