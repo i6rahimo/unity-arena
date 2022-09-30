@@ -7,7 +7,7 @@
 }
 @font-face {
   font-family: 'Akzidenz-Regular';
-  src: url('/assets/fonts/akzidenzgroteskpro_regular.ttf');
+  src: url('/assets/fonts/akzidenzgroteskpro_ext.otf');
 }
 /*=============== VARIABLES CSS ===============*/
 :root {
@@ -674,6 +674,7 @@ stock-swiper-pagination swiper-pagination-fraction swiper-pagination-horizontal 
 
 /* ============== ROOM SWIPER ============= */
 .room__title {
+  font-size: 34px;
   text-transform: uppercase;
   font-family: var(--body-font-light);
 }
@@ -752,6 +753,9 @@ stock-swiper-pagination swiper-pagination-fraction swiper-pagination-horizontal 
   background: #020202;
   height: 34px;
   border-bottom: 2px solid #D9D9D9;
+}
+.form__input input {
+  font-size: 18px;
 }
 .select-list {
   position: absolute;
@@ -1105,15 +1109,26 @@ datalist::after {
     margin: 19px 0 15px;
   }
 }
+@media  (max-width: 461px) {
 
+  .swiper-img-three {
+    top: -100px;
+    /* margin: -49px auto 0; */
+    position: relative;
+  }
+}
 @media (max-width: 756px) {
   .popup__wrapper {
     width: 318px;
   }
   .popup-text {
     font-size: 22px;
-    
   }
+  .swiper-img-three {
+    position: relative;
+    margin: 43px auto 0;
+  }
+
   .address, .container {
     margin: 50px 0 0;
   }
@@ -1223,7 +1238,7 @@ datalist::after {
     padding: 0 10px 0 0;
   }
   .room__title {
-
+    font-size: 24px;
     font-family: var(--body-font-light);
   }
   .stock-swiper-slide {

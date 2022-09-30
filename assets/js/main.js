@@ -75,32 +75,32 @@ const swiper = new Swiper('.swiper', {
     breakpoints: {
       700: {
         slidesPerView: 3,
-    spaceBetween: 20,
+        spaceBetween: 20,
 
       },
       500: {
         slidesPerView: 2,
-    spaceBetween: 10,
+        spaceBetween: 10,
 
       },
-      360: {
-    spaceBetween: 0,
-    slidesPerView: 1,
+      361: {
+        spaceBetween: 0,
+        slidesPerView: 1,
+        scrollbar: {
+          el: '.swiper-scrollbar',
+          dragSize: '174',
+          draggable: true,
+        },
       },
       320: {
+        spaceBetween: 0,
+        slidesPerView: 1,
         scrollbar: {
           el: '.swiper-scrollbar',
           dragSize: '110',
           draggable: true,
         },
       },
-      361: {
-        scrollbar: {
-          el: '.swiper-scrollbar',
-          dragSize: '174',
-          draggable: true,
-        },
-      }
 
     }
   });
