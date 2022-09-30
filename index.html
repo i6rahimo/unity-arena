@@ -55,13 +55,13 @@
                     <div class="swiper-wrapper">
                       <!-- Slides -->
                       <div class="swiper-slide"> 
-                            <video class="video video-large" autoplay muted>
+                            <video class="video video-large" autoplay muted playsinline>
                                     <source src="/assets/video/video-large.webm">
                             </video>
-                            <video class="video video-middle" autoplay muted>
+                            <video class="video video-middle" autoplay muted playsinline>
                                     <source src="/assets/video/Light Streaks_1440x1000(2).mp4">
                             </video>
-                            <video class="video video-small" autoplay muted>
+                            <video class="video video-small" autoplay muted playsinline>
                                     <source src="/assets/video/Light Streaks_360x766.mp4">
                             </video>
                             
@@ -496,7 +496,7 @@
                         <input type="text" name="playerNumber" id="playernumber" placeholder="Количество игроков" maxlength="2" required>
                     </div>
                     <div class="form__input select-form">
-                        <input type="text" name="room" class="select-form-input" placeholder="Выбрать зал">
+                        <input id="select-room" type="text" name="room" class="select-form-input" required>
                         <div class="select-list">
                             <p>COMFORT</p>
                             <p>VIP</p>
