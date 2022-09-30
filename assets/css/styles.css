@@ -355,8 +355,9 @@ button {
 .swiper__text-down {
   margin: 54px 0 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; 
   align-items: center;
+  gap: 30px;
 }
 .swiper__down-link {
   display: flex;
@@ -370,6 +371,10 @@ button {
   text-decoration: underline;
  font-family: var(--body-font-light);
 
+}
+
+.swiper__down-more {
+  align-self: self-start;
 }
 
 .swiper-pagination {
@@ -756,6 +761,8 @@ stock-swiper-pagination swiper-pagination-fraction swiper-pagination-horizontal 
 }
 .form__input input {
   font-size: 18px;
+  background: #020202;
+
 }
 .select-list {
   position: absolute;
@@ -959,10 +966,13 @@ datalist::after {
 .footer {
   width: 1114px;
   max-width: 100%;
-  margin: 150px auto 100px;
+  margin: 0 auto 100px;
   padding: 0 15px 0;
 }
 
+.footer-br {
+  display: none;
+}
 .footer__wrapper {
   display: grid;
   gap: 30px;
@@ -970,7 +980,6 @@ datalist::after {
   grid-template-areas: 'logo . .'
                        'name politic data';
 }
-
 .footer__logo {
   grid-area: logo;
 }
@@ -987,7 +996,7 @@ datalist::after {
 .footer___text {
   color: #797979;
   font-family: var(--body-font-regular);
-  font-size: var(--normal-font-size);
+  font-size: 16px;
 }
 
 /* ================= MEDIA ====================== */
@@ -1129,11 +1138,17 @@ datalist::after {
   .popup-text {
     font-size: 22px;
   }
+  .address__text-social {
+    justify-content: space-between;
+  }
   .swiper-img-three {
     position: relative;
     margin: 43px auto 0;
   }
-
+  .text-margin {
+    display: block;
+    margin: 21px 0 0;
+  }
   .address, .container {
     margin: 50px 0 0;
   }
@@ -1192,6 +1207,21 @@ datalist::after {
   .swiper-subtitle {
     width: 194px;
   }
+  .swiper__down-more {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .swiper__text-down {
+    margin: 54px 0 0;
+    height: 126px;
+    position: relative;
+  }
+  .swiper__down-link {
+    right:  0;
+    bottom: 0;
+    position: absolute;
+  }
   .about__items {
     flex-wrap: wrap;
     justify-content: center;
@@ -1240,7 +1270,7 @@ datalist::after {
     margin: 25px 0 0;
   }
   .room-swiper-pagination {
-    padding: 0 10px 0 0;
+    padding: 0 19px 0 0;
   }
   .room__title {
     font-size: 24px;
@@ -1256,14 +1286,14 @@ datalist::after {
   .footer___text {
     font-size: 14px;
   }
+  .footer__name {
+    text-align: end;
+  }
+  .footer-br {
+    display: block;
+  }
 }
 @media (max-width: 400px) {
-  .swiper__text-down {
-    margin: 54px 0 0;
-    height: 126px;
-    position: relative;
-    
-  }
   .price__accordion-col {
     gap: 12%;
   }
@@ -1287,11 +1317,7 @@ datalist::after {
 }
 
 @media (max-width: 361px) {
-  .swiper__down-more {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+  
   .swiper__down-link {
     position: absolute;
     bottom: 0;
@@ -1305,10 +1331,7 @@ datalist::after {
   .about__items {
     gap: 70px;
   }
-  .text-margin {
-    display: block;
-    margin: 21px 0 0;
-  }
+  
   
   .stock-pagination {
     flex-direction: column-reverse;

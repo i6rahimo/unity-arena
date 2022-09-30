@@ -25,7 +25,7 @@ const swiper = new Swiper('.swiper', {
     wrapperClass: 'stock-swiper-wrapper',
     scrollbar: {
       el: '.swiper-scrollbar',
-      dragSize: '174',
+      dragSize: '174', 
       draggable: true,
     },
     pagination: {
@@ -38,17 +38,13 @@ const swiper = new Swiper('.swiper', {
     breakpoints: {
       320: {
         scrollbar: {
-          el: '.swiper-scrollbar',
           dragSize: '110',
-          draggable: true,
-        },
+        }
       },
-      361: {
+      561: {
         scrollbar: {
-          el: '.swiper-scrollbar',
           dragSize: '174',
-          draggable: true,
-        },
+        }
       }
     }
   });
@@ -73,36 +69,32 @@ const swiper = new Swiper('.swiper', {
       type: 'fraction',
     },
     breakpoints: {
+      320: {
+        scrollbar: {
+          dragSize: '110',
+        }
+      },
+      561: {
+        scrollbar: {
+          dragSize: '174',
+        }
+      }
+    },
+    breakpoints: {
+      320: {  
+        spaceBetween: 0,
+        slidesPerView: 1,
+      },
+      500: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
       700: {
         slidesPerView: 3,
         spaceBetween: 20,
 
       },
-      500: {
-        slidesPerView: 2,
-        spaceBetween: 10,
-
-      },
-      361: {
-        spaceBetween: 0,
-        slidesPerView: 1,
-        scrollbar: {
-          el: '.swiper-scrollbar',
-          dragSize: '174',
-          draggable: true,
-        },
-      },
-      320: {
-        spaceBetween: 0,
-        slidesPerView: 1,
-        scrollbar: {
-          el: '.swiper-scrollbar',
-          dragSize: '110',
-          draggable: true,
-        },
-      },
-
-    }
+    },
   });
 
   const headerNav = document.querySelector('.header__nav'),
@@ -166,7 +158,12 @@ function scrollHeader(){
   if(this.scrollY >= 20) headerInner.classList.add('headerbg');
   else  headerInner.classList.remove('headerbg');
 };
-
+const closeNavLink = document.querySelectorAll('.header__link');
+closeNavLink.forEach(e => {
+  e.addEventListener('click', () => {
+    headerNav.classList.remove('show')
+  })
+})
 let center = [45.02736611000037,39.02762492394255];
 
 function init() {
