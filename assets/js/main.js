@@ -158,12 +158,22 @@ function scrollHeader(){
   if(this.scrollY >= 20) headerInner.classList.add('headerbg');
   else  headerInner.classList.remove('headerbg');
 };
+
+
 const closeNavLink = document.querySelectorAll('.header__link');
 closeNavLink.forEach(e => {
   e.addEventListener('click', () => {
-    headerNav.classList.remove('show')
+    setTimeout(()=> {
+
+      headerNav.classList.add('show')
+      SpanDown.classList.toggle('open')
+    SpanUp.classList.toggle('open')
+    SpanMiddle.classList.toggle('open')
+    }, 100)
   })
 })
+
+
 let center = [45.02736611000037,39.02762492394255];
 
 function init() {
