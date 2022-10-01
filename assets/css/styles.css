@@ -596,7 +596,7 @@ stock-swiper-pagination swiper-pagination-fraction swiper-pagination-horizontal 
 .price__accordion-block::before {
   content: url(/assets/img/acc-line.svg);
   position: absolute;
-  top: -10px;
+  top: -5px;
   left: 0;
 }
 

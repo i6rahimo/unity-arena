@@ -247,3 +247,25 @@ function maxLengthPlayer(number) {
 
 
 }
+
+
+//  SEND MESSAGE 
+
+$(function () {
+
+  $('#form').on('submit', function (e) {
+
+    e.preventDefault();
+
+    $.ajax({
+      type: 'post',
+      url: '../../telegram.php',
+      data: $('#form').serialize(),
+      success: function () {
+      popup.classList.add('show')
+      }
+    });
+
+  });
+
+});

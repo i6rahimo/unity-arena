@@ -477,7 +477,7 @@
             <section class="order container ">
                 <div class="order__wrapper ">
                 <h2 class="order__title">Бронируй</h2>
-                <form id="form" action="" class="order__form">
+                <form id="form" class="order__form">
                     <div class="form__input">
                         <input type="text" name="name" id="" placeholder="Иван Иванов" required>
                     </div>
@@ -486,7 +486,7 @@
                     </div>
                     <div class="form__input select-data">
                         <label for="data">
-                            <input type="text" name="data" id="data" class="data"  required placeholder="12 сентября 2022" >
+                            <input type="text" name="date" id="data" class="data"  required placeholder="12 сентября 2022" >
                         </label>
                     </div>
                     <div class="form__input">
@@ -505,7 +505,7 @@
                         <span class="custom-arrow"></span> 
                     </div> 
                        
-                        <button class="form__send-btn header__btns-order">Забронировать</button>
+                        <button type="submit" class="form__send-btn header__btns-order">Забронировать</button>
                     </div>
                 </form>
             </div>
@@ -556,6 +556,10 @@
 
 
         <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <script
+  src="https://code.jquery.com/jquery-3.6.1.js"
+  integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+  crossorigin="anonymous"></script>
         <script src="https://api-maps.yandex.ru/2.1/?apikey=75f7a3a2-cf88-4d61-9598-c4c02aeb7b23&lang=ru_RU"></script>
         <!--=============== MAIN JS ===============-->
         <script src="/assets/js/main.js" type="module"></script>
