@@ -597,7 +597,7 @@ stock-swiper-pagination swiper-pagination-fraction swiper-pagination-horizontal 
   content: url(/assets/img/acc-line.svg);
   position: absolute;
   top: -5px;
-  left: 0;
+  left: -20px;
 }
 
  
@@ -605,7 +605,7 @@ stock-swiper-pagination swiper-pagination-fraction swiper-pagination-horizontal 
   content: url(/assets/img/acc-line.svg);
   position: absolute;
   bottom: -17px;
-  left: 0;
+  left: -20px;
 } 
 .price__accordion-content {
   display: flex;
@@ -1079,6 +1079,9 @@ datalist::after {
     padding: 20px 16px 25px 16px;
     max-height: 61px;
   }
+  .price__accordion-col {
+    gap: 25%;
+  }
   .col-title {
     margin: 0 0 20px;
   }
@@ -1173,9 +1176,9 @@ datalist::after {
     flex-direction: column;
     gap: 24px;
   }
-  .price__accordion-col {
+  /* .price__accordion-col {
     gap: 17%;
-  }
+  } */
   .swiper-img img {
     height: 731px;  
   }
@@ -1286,15 +1289,15 @@ datalist::after {
     display: block;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 458px) {
   .price__accordion-col {
     gap: 12%;
   }
 }
 @media (max-width: 350px) {
-  .price__accordion-col {
+  /* .price__accordion-col {
     gap: 5%;
-  }
+  } */
   .price__accordion-block {
     padding: 20px 0px 25px 0px;
     max-height: 61px;

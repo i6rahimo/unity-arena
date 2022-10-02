@@ -192,9 +192,9 @@ function init() {
   map.controls.remove('searchControl'); // удаляем поиск
   map.controls.remove('trafficControl'); // удаляем контроль трафика
   map.controls.remove('typeSelector'); // удаляем тип
-  // map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
-  // map.controls.remove('zoomControl'); // удаляем контрол зуммирования
-  // map.controls.remove('rulerControl'); // удаляем контрол правил
+  map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+  map.controls.remove('zoomControl'); // удаляем контрол зуммирования
+  map.controls.remove('rulerControl'); // удаляем контрол правил
   // map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
   map.geoObjects.add(placemark);
 }
@@ -202,17 +202,6 @@ function init() {
 ymaps.ready(init);
 
 
-
-
-const sendOrder = document.querySelector('.form__send-btn').addEventListener('click', sendMessage);
-
-function sendMessage() {
-  let xhr = new XMLHttpRequest();
-
-  xhr.open('POST', '../../telegram.php');
-
-  xhr.send()
-}
 
 
 const closePopup = document.querySelector('.close-popup').addEventListener('click', popupClose);
@@ -232,21 +221,6 @@ function popupClose() {
 }
 
 
-
-
-const maxPlayrInput = document.querySelector('#playernumber');
-maxPlayrInput.addEventListener('input', function maxLengthPlayer (number){});
-function maxLengthPlayer(number) {
-  const str = '';
-  console.log(number.value);
-  // number.map(num => num > 24 ? console.log('erro') : console.log('yes'))
-  // this.placeholder = 'Введите цифру'
-  // if(this.value > 24)  { 
-    // this.value = 'Введите цифру от 1 до 24';
-  // } 
-
-
-}
 
 
 //  SEND MESSAGE 
@@ -269,3 +243,12 @@ $(function () {
   });
 
 });
+
+
+const playInput = document.querySelector('#playernumber').addEventListener('input', inputNumber)
+
+function inputNumber(e) {
+  for(let i = 0; i <= e.length; i++) {
+    console.log(e.value[i]);
+  }
+}
