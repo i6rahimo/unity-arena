@@ -10,7 +10,6 @@ const swiper = new Swiper('.swiper', {
       delay: 4000,
     },
     speed: 1000,
-    // If we need pagination
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',

@@ -325,6 +325,7 @@ button {
 .swiper {
   position: relative;
 }
+
 .swiper-wrapper {
   position: relative;
 }
@@ -336,6 +337,7 @@ button {
  right: 0;
  left: 0;
  margin: auto;
+ z-index: 99999;
 }
 .swiper-slide-three .swiper__text {
 /* bottom: 100px;  */
