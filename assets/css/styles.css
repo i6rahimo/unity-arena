@@ -604,7 +604,7 @@ stock-swiper-pagination swiper-pagination-fraction swiper-pagination-horizontal 
 .price__accordion-block:nth-of-type(3)::after {
   content: url(/assets/img/acc-line.svg);
   position: absolute;
-  bottom: -17px;
+  bottom: -12px;
   left: -20px;
 } 
 .price__accordion-content {
@@ -884,10 +884,9 @@ datalist::after {
 }
 
 .address__text {
-  background: url(/assets/img/addressbg.svg);
+  background: url('/assets/img/addressbg.svg');
   background-size: contain;
   background-repeat: no-repeat;
-  /* height: 368px; */
   padding: 47px 141px 47px 47px;
   margin: 100px 0 0;
   z-index: 1;
@@ -1076,9 +1075,13 @@ datalist::after {
     margin: auto;
   }
   .price__accordion-block {
-    padding: 20px 16px 25px 16px;
-    max-height: 61px;
+    padding: 26px 16px 25px 16px;
+    max-height: 69px;
   }
+  .block-third, .block-second {
+    width: 70px;
+  }
+
   .price__accordion-col {
     gap: 25%;
   }
@@ -1087,6 +1090,7 @@ datalist::after {
   }
   .price__accordion-text  {
     font-size: 14px;
+    width: 86px;
   }
   .address__map {
     position: relative;
@@ -1105,10 +1109,14 @@ datalist::after {
     max-width: 100%;
     padding: 32px 27px 39px 30px;
     margin: -50px auto 0;
+    height: 319px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
   .address__text::after {
     width: 279px;
-    height: 281px;
+    height: 311px;
     top: 19px;
     left: 19px;
   }
@@ -1135,7 +1143,12 @@ datalist::after {
     font-size: 22px;
   }
   .address__text-social {
+    margin: 44px 0 39px;
     justify-content: space-between;
+  }
+  .address__text-social img {
+    width: 40px;
+    height: 40px;
   }
   .swiper-img-three {
     position: relative;
@@ -1154,6 +1167,9 @@ datalist::after {
   .price__accordion-title {
     grid-template-areas: 'first-title first-title first-title arrow' '. second-title third-title third-title';
     /* gap: 20px; */
+  }
+  .about {
+    margin: 0 0 0 ;
   }
   .first-col {
     /* max-width: 63px; */
@@ -1186,7 +1202,7 @@ datalist::after {
     height:  790px;
   }
   .header {
-    height: 766px;
+    height: 673px;
   }
   .swiper {
     height: 766px;
@@ -1202,6 +1218,13 @@ datalist::after {
   }
   .swiper-subtitle {
     width: 194px;
+    font-size: 16px;
+  }
+  .wiper__down-link a {
+    font-size: 16px;
+  }
+  .swiper__down-more a {
+    font-size: 16px;
   }
   .swiper__down-more {
     position: absolute;
@@ -1299,7 +1322,7 @@ datalist::after {
     gap: 5%;
   } */
   .price__accordion-block {
-    padding: 20px 0px 25px 0px;
+    padding: 26px 0px 25px 0px;
     max-height: 61px;
   }
 }
