@@ -2,21 +2,60 @@
 import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js';
 
 const swiper = new Swiper('.swiper', {
-  // Optional parameters
-    // modules: [ Navigation, Pagination],
-    direction: 'horizontal',
-    loop: true,
-    autoplay: {
-      delay: 4000,
-    },
-    speed: 1000,
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true,
-    },
-  });
-  const stockSwiper = new Swiper('.stock-swiper', {
+  direction: 'horizontal',
+  // slidesPerView: 1,
+  loop: true,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: true,	
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true,
+  },
+});
+
+// function checkSlide() {
+//   const slideee = document.querySelector('.swiper-slide-active');
+//   const slide = document.querySelector('.swiper-slide')
+//   if(slide.classList.contains(slideee)) {
+//     let video = document.querySelector(".video");
+//     video.play(); 
+//     console.log('w');
+//   } else {
+
+//     console.log('no');
+//   }
+// }
+swiper.on('slideChange', function () {
+  // console.log('slide changed'); 
+  // console.log(video);
+  let videoWrapper = document.querySelectorAll(".video");
+  // console.log(videoWrapper);
+  videoWrapper.forEach(e => {
+    if(e.play) {
+      // e.paused;
+      // e.currentTime = 0;
+      e.pause();
+      e.currentTime = 0;
+      e.load();
+      // e.load;
+      // console.log('qwe');
+    }else {
+      // e.paused;
+      // e.c;
+      e.currentTime = 0;
+      console.log('no');
+    }
+  })
+
+    // video.paused;
+  
+  // video.currentTime = 0;
+  // video.autoplay.start();
+});
+ const stockSwiper = new Swiper('.stock-swiper', {
     // Optional parameters
     direction: 'horizontal',
     // loop: true,
@@ -206,10 +245,10 @@ ymaps.ready(init);
 const closePopup = document.querySelector('.close-popup').addEventListener('click', popupClose);
 const popup = document.querySelector('.popup__back')
 // const backClosePopup = document.querySelector('.popup__back').addEventListener('click', closeWithBack);
-const openPopupBtn = document.querySelector('.form__send-btn').addEventListener('click', openPopup);
-function openPopup() {
-  popup.classList.add('show')
-}
+// const openPopupBtn = document.querySelector('.form__send-btn').addEventListener('click', openPopup);
+// function openPopup() {
+//   popup.classList.add('show')
+// }
 
 // function closeWithBack() {
 //   this.classList.remove('show')
